@@ -4,7 +4,7 @@ import { mongoose } from "mongoose";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import admin from "firebase-admin";
-import serviceAccount from "./mern-blog-4c4c5-firebase-adminsdk-59dzc-dc8c126235.json" assert { type : "json" }
+
 import dotenv from 'dotenv';
 
 dotenv.config()
@@ -19,6 +19,7 @@ app.use(cors({
     credentials: true
 }))
 
+//import your service account
 admin.initializeApp({
     credential : admin.credential.cert(serviceAccount)
 })
