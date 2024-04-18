@@ -56,6 +56,8 @@ const CreateBlog = () => {
         loadingToast = toast.loading("Uploading...");
         }
     }
+
+    //set up your firebase
     const uploadImage = async() => {
         const storage = getStorage(app);
         const fileName = new Date().getTime() + imageFile.name;
